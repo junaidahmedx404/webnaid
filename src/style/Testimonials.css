@@ -1,0 +1,85 @@
+/* --- Testimonials Visual Grid Style --- */
+
+.reviews-section {
+  background-color: var(--bg-secondary); /* #111827 alternate style base */
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.reviews-badge {
+  display: inline-block;
+  color: var(--accent-primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.reviews-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.review-card {
+  background-color: var(--bg-primary); /* #0B0F19 card pop */
+  border: 1px solid var(--border-subtle);
+  padding: 2.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-stars {
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.review-quote {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.review-meta strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.review-meta span {
+  color: var(--accent-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* --- Media Queries --- */
+
+@media (max-width: 768px) {
+  .reviews-header h2 {
+    font-size: 2rem;
+  }
+  
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .review-card {
+    padding: 1.75rem;
+  }
+}
