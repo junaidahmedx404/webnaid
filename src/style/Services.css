@@ -57,3 +57,18 @@
     padding: 2rem;
   }
 }
+
+.service-icon {
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  color: var(--accent-primary); /* Uses your exact brand #3B82F6 color definition */
+}
+
+/* Ensure the vector handles container scaling dynamically */
+.service-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
