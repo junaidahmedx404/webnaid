@@ -10,7 +10,7 @@ function Portfolio() {
       solution: "Built a high-performance web platform complete with prominent class schedules, mobile-optimized registration, and direct payment pathways.",
       result: "Engineered to capture automated member signups 24/7 without manual admin tracking required.",
       demoColor: "#EF4444",
-      link: "#"
+      link: "https://junaidahmedx404.github.io/larkana-gym-showcase/"
     },
     {
       badge: "Restaurant & Dining",
