@@ -15,11 +15,22 @@ function Testimonials() {
       projectUrl: "https://example.com/live-site-1", // Swap with your actual client project link
       profileUrl: "https://linkedin.com/in/username", // Swap with their LinkedIn or profile link
     },
+    // {
+    //   quote:
+    //     "I needed a portfolio website for my university work and future career opportunities. Junaid delivered a clean and professional website that matched my requirements perfectly. The process was smooth, and the final result exceeded my expectations. I highly recommend Webnaid Studio for anyone looking for a reliable and skilled web developer.",
+    //   clientName: "David Miller",
+    //   role: "BBA Student, University of Larkano",
+    //   avatar:
+    //     "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+    //   platform: "University Student Testimonial",
+    //   projectUrl: "https://example.com/live-site-2",
+    //   profileUrl: "https://linkedin.com/in/username",
+    // },
     {
       quote:
-        "I needed a portfolio website for my university work and future career opportunities. Junaid delivered a clean and professional website that matched my requirements perfectly. The process was smooth, and the final result exceeded my expectations. I highly recommend Webnaid Studio for anyone looking for a reliable and skilled web developer.",
-      clientName: "David Miller",
-      role: "BBA Student, University of Larkano",
+        "Webnaid Studio developed an eCommerce website for my business that made it easy to display products and receive online orders. The site is fast, professional, and exactly what I was looking for. Highly recommended.",
+      clientName: "Jamshaid Hammid",
+      role: "Ecommerce Business Owner, Karachi",
       avatar:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
       platform: "University Student Testimonial",
@@ -28,20 +39,20 @@ function Testimonials() {
     },
     {
       quote:
-        "I needed a portfolio website for my university work and future career opportunities. Junaid delivered a clean and professional website that matched my requirements perfectly. The process was smooth, and the final result exceeded my expectations. I highly recommend Webnaid Studio for anyone looking for a reliable and skilled web developer.",
-      clientName: "David Miller",
-      role: "BBA Student, University of Larkano",
+        "I wanted a professional website for my gym to showcase our facilities, membership plans, and contact information. Webnaid Studio delivered a modern and responsive website that represents our brand perfectly. The site is fast, easy to navigate, and has helped us attract new members.",
+      clientName: "Sabir Ali",
+      role: "Gym Owner, Larkano",
       avatar:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
       platform: "University Student Testimonial",
-      projectUrl: "https://example.com/live-site-2",
+      projectUrl: "https://junaidahmedx404.github.io/larkana-gym-showcase/",
       profileUrl: "https://linkedin.com/in/username",
     },
     {
       quote:
-        "I needed a portfolio website for my university work and future career opportunities. Junaid delivered a clean and professional website that matched my requirements perfectly. The process was smooth, and the final result exceeded my expectations. I highly recommend Webnaid Studio for anyone looking for a reliable and skilled web developer.",
-      clientName: "David Miller",
-      role: "BBA Student, University of Larkano",
+        "We wanted to replace handwritten prescriptions with a digital solution that would save time and make medication instructions clearer for patients. Webnai Studio developed a fully customized prescription printing system for our tablets, tailored exactly to our clinic's workflow. It has made prescription management faster, more professional, and much easier for both doctors and patients.",
+      clientName: "Abdul Samad",
+      role: "Computer Operator, Larkano Medical Center",
       avatar:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
       platform: "University Student Testimonial",
