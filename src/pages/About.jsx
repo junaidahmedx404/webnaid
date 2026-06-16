@@ -2,6 +2,7 @@
 import "../style/About.css";
 import F_Developer from "../assets/frontend_developer.jpeg";
 import SEO_Expert from "../assets/growth_stratgist.jpeg"
+import API_Engineer from "../assets/API_Engineer.jpeg";
 function About() {
   const principles = [
     {
@@ -103,13 +104,13 @@ function About() {
           <div className="team-card network-member">
             <div className="member-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+                src={API_Engineer}
                 alt="Backend Specialist"
               />
               <span className="card-badge">Vetted Network</span>
             </div>
             <div className="member-info">
-              <h3>Database Specialist</h3>
+              <h3>Zain Ali</h3>
               <p className="member-role">Infrastructure & API Engineer</p>
               <p className="member-desc">
                 Our go-to expert for complex storage systems, secure data

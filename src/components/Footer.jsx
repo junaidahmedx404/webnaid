@@ -24,7 +24,7 @@ function Footer({ onPrivacyClick, onTermsClick }) {
         <div className="footer-contact">
           <h4>Start Your Project</h4>
           <p>We are currently accepting new local clients. Let's talk about growing your revenue.</p>
-          <a href="mailto:hello@webnaid.com" className="footer-email">hello@webnaid.com</a>
+          <a href="mailto:webnaidstudio@gmail.com" className="footer-email">webnaidstudio@gmail.com</a>
         </div>
 
         {/* Social Accounts Area */}
