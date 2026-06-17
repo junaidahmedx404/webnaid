@@ -4,7 +4,7 @@ function Portfolio() {
   const projects = [
     {
       badge: "Gym & Fitness",
-      title: "IronPulse Fitness Hub",
+      title: "The Larkana Gym",
       image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1000", // Replace with your screenshot
       problem: "The gym relied on chaotic Instagram DMs for class bookings, losing track of leads and frustrating potential members.",
       solution: "Built a high-performance web platform complete with prominent class schedules, mobile-optimized registration, and direct payment pathways.",
@@ -14,13 +14,13 @@ function Portfolio() {
     },
     {
       badge: "Restaurant & Dining",
-      title: "The Olive Bistro",
+      title: "The Larkana Bistro",
       image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1000", // Replace with your screenshot
       problem: "An outdated PDF menu forced users to download files onto their phones, hiding reservation options and driving customers away.",
       solution: "Developed a modern, lightning-fast digital interactive menu layout paired with a simple automated table reservation flow.",
       result: "Optimized to dramatically reduce bounce rates and maximize weekend dinner table bookings.",
       demoColor: "#10B981",
-      link: "#"
+      link: "https://junaidahmedx404.github.io/larkana-bistro-showcase/"
     },
     {
       badge: "Real Estate Agency",
