@@ -6,12 +6,20 @@
   left: 0;
   right: 0;
   height: 80px;
-  background-color: rgba(11, 15, 25, 0.75); /* #0B0F19 background with opacity */
+  background-color: rgba(
+    11,
+    15,
+    25,
+    0.75
+  ); /* #0B0F19 background with opacity */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px); /* Safari support */
   border-bottom: 1px solid transparent;
   z-index: 9999;
-  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Subtle visual trigger state when client shifts down viewports */
@@ -63,6 +71,7 @@
   padding: 0.5rem 1.25rem !important;
   font-size: 0.9rem !important;
   border-radius: 6px;
+  color: white !important;
 }
 
 /* --- Interactive Mobile Toggle Trigger Layouts --- */
@@ -82,7 +91,9 @@
   width: 24px;
   height: 2px;
   background-color: var(--text-primary);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 /* --- Responsive Layout Breakpoint Adaptations --- */
@@ -134,11 +145,11 @@
   .nav-toggle.open .hamburger-bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-  
+
   .nav-toggle.open .hamburger-bar:nth-child(2) {
     opacity: 0;
   }
-  
+
   .nav-toggle.open .hamburger-bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }

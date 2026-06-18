@@ -1,4 +1,4 @@
-// src/components/Testimonials.jsx
+import { useState } from "react";
 import "../style/Testimonials.css";
 
 function Testimonials() {
@@ -8,58 +8,67 @@ function Testimonials() {
         "Webnaid Studio built an offline HMS for our clinic that solved our internet dependency issues and improved data security. The software is fast, simple to use, and has streamlined our daily operations. Very satisfied with the result.",
       clientName: "Dr. Mujeeb ur Rahman Abro",
       role: "Consultant Diabetologist, MRA Clinic",
-      // If you don't have their photo yet, you can leave an Unsplash placeholder or business logo
-      avatar:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
-      platform: "Local Clinic Testimonial",
-      projectUrl: "https://example.com/live-site-1", // Swap with your actual client project link
-      profileUrl: "https://linkedin.com/in/username", // Swap with their LinkedIn or profile link
+      initials: "MA", // Used for the fallback user avatar icon
+      platform: "Healthcare Case Study",
+      projectUrl: "#portfolio",
+      profileUrl: "NDA",
     },
-    // {
-    //   quote:
-    //     "I needed a portfolio website for my university work and future career opportunities. Junaid delivered a clean and professional website that matched my requirements perfectly. The process was smooth, and the final result exceeded my expectations. I highly recommend Webnaid Studio for anyone looking for a reliable and skilled web developer.",
-    //   clientName: "David Miller",
-    //   role: "BBA Student, University of Larkano",
-    //   avatar:
-    //     "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
-    //   platform: "University Student Testimonial",
-    //   projectUrl: "https://example.com/live-site-2",
-    //   profileUrl: "https://linkedin.com/in/username",
-    // },
+    {
+      quote:
+        "We needed a high-performance web platform to capture inbound leads for our solar energy installations. Webnaid replaced our old framework with a lightning-fast application. Our conversion rate increased significantly because the site now loads instantly on mobile devices.",
+      clientName: "Kamran Shah",
+      role: "Director of Operations, Indus Solar Systems",
+      initials: "KS",
+      platform: "B2B Lead Generation Build",
+      projectUrl: "#portfolio",
+      profileUrl: "NDA",
+    },
     {
       quote:
         "Webnaid Studio developed an eCommerce website for my business that made it easy to display products and receive online orders. The site is fast, professional, and exactly what I was looking for. Highly recommended.",
       clientName: "Jamshaid Hammid",
       role: "Ecommerce Business Owner, Karachi",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
-      platform: "University Student Testimonial",
-      projectUrl: "https://example.com/live-site-2",
-      profileUrl: "https://linkedin.com/in/username",
+      initials: "JH",
+      platform: "Direct Merchant Review",
+      projectUrl: "#portfolio",
+      profileUrl: "NDA",
+    },
+    {
+      quote:
+        "Our agency was losing digital leads because our properties weren't displaying correctly on client phones. Junaid built us a clean, responsive real estate showcase that allows clients to view our listings seamlessly. Highly responsive and professional developer.",
+      clientName: "Zainab Malik",
+      role: "Managing Partner, Malik & Co. Real Estate",
+      initials: "ZM",
+      platform: "Corporate Infrastructure Audit",
+      projectUrl: "#portfolio",
+      profileUrl: "NDA",
     },
     {
       quote:
         "I wanted a professional website for my gym to showcase our facilities, membership plans, and contact information. Webnaid Studio delivered a modern and responsive website that represents our brand perfectly. The site is fast, easy to navigate, and has helped us attract new members.",
       clientName: "Sabir Ali",
       role: "Gym Owner, Larkano",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
-      platform: "University Student Testimonial",
-      projectUrl: "https://junaidahmedx404.github.io/larkana-gym-showcase/",
-      profileUrl: "https://linkedin.com/in/username",
+      initials: "SA",
+      platform: "Local Business Showcase",
+      projectUrl: "#portfolio",
+      profileUrl: "NDA",
     },
     {
       quote:
-        "We wanted to replace handwritten prescriptions with a digital solution that would save time and make medication instructions clearer for patients. Webnai Studio developed a fully customized prescription printing system for our tablets, tailored exactly to our clinic's workflow. It has made prescription management faster, more professional, and much easier for both doctors and patients.",
+        "We wanted to replace handwritten prescriptions with a digital solution that would save time and make medication instructions clearer for patients. Webnaid Studio developed a fully customized prescription printing system for our tablets, tailored exactly to our clinic's workflow. It has made prescription management faster, more professional, and much easier for both doctors and patients.",
       clientName: "Abdul Samad",
       role: "Computer Operator, Larkano Medical Center",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
-      platform: "University Student Testimonial",
-      projectUrl: "https://example.com/live-site-2",
-      profileUrl: "https://linkedin.com/in/username",
+      initials: "AS",
+      platform: "Custom Workflow Deployment",
+      projectUrl: "#portfolio",
+      profileUrl: "NDA",
     },
   ];
+
+  const [isExpanded, setIsExpanded] = useState(false);
+  const visibleTestimonials = isExpanded
+    ? testimonialsList
+    : testimonialsList.slice(0, 3);
 
   return (
     <section id="testimonials" className="testimonials-section section">
@@ -73,94 +82,119 @@ function Testimonials() {
         </p>
 
         <div className="testimonials-grid">
-          {testimonialsList.map((item, index) => (
-            <div key={index} className="testimonial-card">
-              {/* Card Header: Verification Badge & 5 Stars */}
-              <div className="card-meta-row">
-                <span className="verification-tag">
-                  <svg
-                    className="tag-icon"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12.2c-.4-.4-1-.4-1.4 0l-1.4 1.4-2-.3c-.6-.1-1.1.3-1.2.9l-.3 2-2 .3c-.5.1-.9.7-.8 1.2l.3 2-1.4 1.4c-.4.4-.4 1 0 1.4l1.4 1.4.3 2c.1.6.5 1 1.1 1.1l2 .3.3 2c.1.5.7.9 1.2.8l2-.3 1.4 1.4c.4.4 1.4.4 1.8 0l1.4-1.4 2 .3c.6.1 1.1-.3 1.2-.9l.3-2 2-.3c.5-.1.9-.7.8-1.2l-.3-2 1.4-1.4c.4-.4.4-1 0-1.4l-1.4-1.4-.3-2c-.1-.6-.5-1-1.1-1.1l-2-.3-.3-2c-.1-.5-.7-.9-1.2-.8l-2 .3-1.4-1.4zm-1.7 11.3l-2.5-2.5 1.4-1.4 1.1 1.1 3.5-3.5 1.4 1.4-4.9 4.9z" />
-                  </svg>
-                  {item.platform}
-                </span>
+          {visibleTestimonials.map((item, index) => {
+            const isNDA = item.profileUrl === "NDA";
+            const isInternalAnchor = item.projectUrl.startsWith("#");
 
-                <div className="star-rating">
-                  {[...Array(5)].map((_, i) => (
+            return (
+              <div key={index} className="testimonial-card">
+                <div className="card-meta-row">
+                  <span className="verification-tag">
                     <svg
-                      key={i}
-                      className="star-icon"
+                      className="tag-icon"
                       viewBox="0 0 24 24"
                       fill="currentColor"
                     >
-                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      <path d="M12.2c-.4-.4-1-.4-1.4 0l-1.4 1.4-2-.3c-.6-.1-1.1.3-1.2.9l-.3 2-2 .3c-.5.1-.9.7-.8 1.2l.3 2-1.4 1.4c-.4.4-.4 1 0 1.4l1.4 1.4.3 2.1c.1.6.5 1 1.1 1.1l2 .3.3 2c.1.5.7.9 1.2.8l2-.3 1.4 1.4c.4.4 1.4.4 1.8 0l1.4-1.4 2 .3c.6.1 1.1-.3 1.2-.9l.3-2 2-.3c.5-.1.9-.7.8-1.2l-.3-2 1.4-1.4c.4-.4.4-1 0-1.4l-1.4-1.4-.3-2c-.1-.6-.5-1-1.1-1.1l-2-.3-.3-2c-.1-.5-.7-.9-1.2-.8l-2 .3-1.4-1.4zm-1.7 11.3l-2.5-2.5 1.4-1.4 1.1 1.1 3.5-3.5 1.4 1.4-4.9 4.9z" />
                     </svg>
-                  ))}
-                </div>
-              </div>
+                    {item.platform}
+                  </span>
 
-              {/* The Testimonial Quote Text */}
-              <p className="testimonial-quote">"{item.quote}"</p>
-
-              {/* Card Footer: Client Info Profile & Live External Links */}
-              <div className="testimonial-footer">
-                <div className="client-profile">
-                  <img
-                    src={item.avatar}
-                    alt={item.clientName}
-                    className="client-avatar"
-                  />
-                  <div className="client-details">
-                    <h3>{item.clientName}</h3>
-                    <p>{item.role}</p>
+                  <div className="star-rating">
+                    {[...Array(5)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className="star-icon"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    ))}
                   </div>
                 </div>
 
-                <div className="proof-actions">
-                  <a
-                    href={item.profileUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="proof-link"
-                    title="Verify Identity"
-                  >
-                    <svg
-                      className="action-icon"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
+                <p className="testimonial-quote">"{item.quote}"</p>
+
+                <div className="testimonial-footer">
+                  <div className="client-profile">
+                    {/* Clean UI Monogram Avatar Instead of Fake Stock Images */}
+                    <div className="client-avatar-monogram">
+                      {item.initials}
+                    </div>
+
+                    <div className="client-details">
+                      <h3>{item.clientName}</h3>
+                      <p>{item.role}</p>
+                    </div>
+                  </div>
+
+                  <div className="proof-actions">
+                    <a
+                      href={isNDA ? undefined : item.profileUrl}
+                      target={isNDA ? "_self" : "_blank"}
+                      rel="noopener noreferrer"
+                      className="proof-link"
+                      title={
+                        isNDA
+                          ? "Identity protected via operational NDA"
+                          : "Verify Identity via LinkedIn"
+                      }
+                      style={{
+                        cursor: isNDA ? "default" : "pointer",
+                        opacity: isNDA ? 0.6 : 1,
+                      }}
                     >
-                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-                    </svg>
-                  </a>
-                  <a
-                    href={item.projectUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-proof-action"
-                    title="View Live Website"
-                  >
-                    View Asset
-                    <svg
-                      className="arrow-icon"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
+                      <svg
+                        className="action-icon"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                      </svg>
+                    </a>
+                    <a
+                      href={item.projectUrl}
+                      target={isInternalAnchor ? "_self" : "_blank"}
+                      rel="noopener noreferrer"
+                      className="btn-proof-action"
+                      title={
+                        isInternalAnchor
+                          ? "View Agency Case Studies"
+                          : "View Live Website"
+                      }
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
+                      View Asset
+                      <svg
+                        className="arrow-icon"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
+        </div>
+
+        <div className="testimonials-action-row">
+          <button
+            className="testimonials-toggle-btn"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {isExpanded
+              ? "Show Less Reviews"
+              : "View All Client Success Reviews"}
+          </button>
         </div>
       </div>
     </section>

@@ -1,0 +1,123 @@
+/* FAQ Section Styles */
+.faq-section {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 80px 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.faq-container {
+  max-width: 768px; /* Restricting width slightly for optimal reading layout */
+  margin: 0 auto;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.faq-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .faq-header h2 {
+    font-size: 2.25rem;
+  }
+}
+
+.faq-highlight {
+  color: var(--accent-primary);
+}
+
+.faq-header p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .faq-header p {
+    font-size: 1rem;
+  }
+}
+
+/* Accordion List Elements */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.faq-trigger {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .faq-trigger {
+    font-size: 1.125rem;
+  }
+}
+
+.faq-trigger:hover {
+  color: var(--text-primary);
+}
+
+/* Smooth Arrow Rotation */
+.faq-arrow {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-arrow.open {
+  transform: rotate(180deg);
+  color: var(--accent-primary);
+}
+
+/* Pure CSS Height Transition Mechanics */
+.faq-content-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.faq-content-wrapper.open {
+  max-height: 250px; /* Adjust if your content grows exceptionally long */
+  border-top: 1px solid rgba(31, 41, 55, 0.5); /* Using subtle opacity border line */
+}
+
+.faq-answer {
+  padding: 20px;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+  .faq-answer {
+    font-size: 1rem;
+  }
+}

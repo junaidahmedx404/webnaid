@@ -167,6 +167,36 @@
   height: 14px;
 }
 
+/* Expansion Control Area Styles */
+.testimonials-action-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.testimonials-toggle-btn {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.testimonials-toggle-btn:hover {
+  background-color: var(--border-subtle);
+  border-color: var(--text-secondary);
+  transform: translateY(-2px);
+}
+
+.testimonials-toggle-btn:active {
+  transform: translateY(0);
+}
+
 /* Responsive Scaling Breakpoint */
 @media (max-width: 900px) {
   .testimonials-grid {

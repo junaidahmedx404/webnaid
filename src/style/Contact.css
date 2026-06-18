@@ -99,10 +99,12 @@
 .contact-form label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #E5E7EB;
+  color: #e5e7eb;
 }
 
-.contact-form input,
+/* TARGETS TEXT INPUTS ONLY — Fixes the full-width checkbox stretch bug */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
 .contact-form textarea {
   background-color: var(--bg-primary); /* Dark text boxes */
   border: 1px solid var(--border-subtle);
@@ -111,16 +113,73 @@
   color: var(--text-primary);
   font-family: inherit;
   font-size: 0.95rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
   width: 100%;
 }
 
-/* Subtle accent focus highlight borders on select variables */
-.contact-form input:focus,
+/* Subtle accent focus highlight borders on standard text inputs */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--accent-primary);
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* --- Premium Consent Checkbox Block --- */
+.form-checkbox-group {
+  display: flex;
+  align-items: flex-start; /* Aligns checkbox to the top line of text */
+  justify-content: flex-start;
+  gap: 0.75rem;
+  width: 100%;
+  margin: 0.25rem 0;
+  box-sizing: border-box;
+}
+
+/* Explicit Reset Rules targeting ONLY the checkbox element type */
+.contact-form input[type="checkbox"].form-checkbox {
+  appearance: checkbox !important;
+  -webkit-appearance: checkbox !important;
+  -moz-appearance: checkbox !important;
+  flex-shrink: 0; /* Prevents text from squishing the checkbox structure */
+  width: 16px !important;
+  height: 16px !important;
+  padding: 0 !important; /* Removes the text box layout padding */
+  margin: 4px 0 0 0 !important; /* Positions box aligned perfectly with first text line */
+  cursor: pointer;
+  accent-color: var(--accent-primary);
+  box-shadow: none !important; /* Clears focus ring glow distortions */
+  background-color: initial !important;
+  border: initial !important;
+}
+
+/* Typography Layout Rules for Text Box Label */
+.checkbox-label {
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  text-align: left;
+  user-select: none;
+}
+
+/* Embedded Document Links Matrix */
+.legal-link-highlight {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+/* Link Hover State Transitions */
+.legal-link-highlight:hover {
+  color: var(--accent-primary);
 }
 
 .form-submit-btn {
@@ -130,6 +189,47 @@
   font-size: 1rem;
 }
 
+/* --- Premium Dropdown Overrides & Elements --- */
+
+.form-select {
+  background-color: var(--bg-primary); 
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.75rem 2.5rem 0.75rem 1rem; /* Keeps space open for custom arrow */
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  width: 100%;
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%233B82F6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.15rem;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.form-select option {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.form-select option:disabled {
+  color: var(--text-secondary);
+}
+
 /* --- Media Queries for Responsive Contact Layout --- */
 
 @media (max-width: 960px) {
@@ -137,11 +237,11 @@
     grid-template-columns: 1fr;
     gap: 3.5rem;
   }
-  
+
   .contact-info-panel h2 {
     font-size: 2rem;
   }
-  
+
   .contact-form-wrapper {
     padding: 1.5rem;
   }
@@ -151,5 +251,11 @@
   .form-group-row {
     flex-direction: column;
     gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkbox-label {
+    font-size: 0.8rem;
   }
 }

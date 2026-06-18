@@ -4,49 +4,49 @@ import "../style/Pricing.css";
 function Pricing() {
   const tiers = [
     {
-      name: "Starter Landing",
-      price: "150",
-      period: "one-time",
-      desc: "Perfect for single-service professionals needing a high-converting, professional landing space to run ads or capture immediate local phone calls.",
+      name: "Conversion Assets",
+      price: "Launch Floor",
+      period: "project-based",
+      desc: "Engineered single-page landing systems built to run high-intent ad traffic, capture localized search queries, and maximize immediate lead generation.",
       features: [
-        "1 Fully Customized Landing Page",
-        "100% Secure & Mobile Optimized",
-        "Integrated Lead Capture Form",
-        "Under 2-Second Loading Speeds",
-        "Free Global CDN Deployment Setup",
+        "Fully Bespoke Conversion Architecture",
+        "100% Mobile Fluidity & Semantic Layouts",
+        "Deep-Layer Lead Form Routing",
+        "Sub 1.5-Second Core Web Vitals Optimization",
+        "Global Edge CDN Network Deployment",
       ],
       isPopular: false,
-      ctaText: "Get Started",
+      ctaText: "Request Scope Proposal",
     },
     {
-      name: "Business Growth",
-      price: "300",
-      period: "one-time",
-      desc: "Optimized for established brick-and-mortar brands looking to thoroughly dominate their local search traffic and showcase comprehensive services.",
+      name: "Market Domination Platforms",
+      price: "Enterprise Growth",
+      period: "project-based",
+      desc: "Custom multi-page ecosystems optimized for established businesses aiming to capture regional traffic, outpace competitors, and automate customer inquiries.",
       features: [
-        "Up to 5 High-Performance Pages",
-        "Advanced Local SEO Optimization",
-        "Interactive UI Blocks (e.g., Calculators)",
-        "Custom Contact & Review Integrations",
-        "Full Content Management Hand-off",
+        "Advanced Multi-Tier Operational Architecture",
+        "Hyper-Targeted Local SEO Infrastructure",
+        "Interactive Native UI Blocks (e.g., Calculators)",
+        "Automated Form Routing & CRM Webhooks",
+        "Full Component Hand-off & System Briefing",
       ],
       isPopular: true,
-      ctaText: "Most Popular Option",
+      ctaText: "Schedule Discovery Call",
     },
     {
-      name: "Custom Platform",
-      price: "Custom",
-      period: "project-based",
-      desc: "Tailored architectural solutions for organizations requiring complex multi-tiered booking frameworks, deep database pipelines, or external API hubs.",
+      name: "Custom Software Deployments",
+      price: "Custom Scope",
+      period: "milestone-based",
+      desc: "Bespoke internal systems, private clinic databases, offline-capable applications, or complex multi-user portals mapped to your exact organizational workflow.",
       features: [
-        "Unlimited Scoped Framework Pages",
-        "Bespoke Database & API Integrations",
-        "Advanced Booking/User Portals",
-        "Priority Architecture Support",
-        "Dedicated Structural Scaling Roadmap",
+        "Unlimited Purpose-Built Framework Pages",
+        "Secure Database Pipelines & External API Hubs",
+        "Custom Automated User/Booking Portals",
+        "Isolated Offline-First Failure Safety Nets",
+        "Dedicated Systems Scaling & Architectural Support",
       ],
       isPopular: false,
-      ctaText: "Schedule Discovery Call",
+      ctaText: "Initialize Technical Audit",
     },
   ];
 
@@ -55,12 +55,12 @@ function Pricing() {
       <div className="container">
         {/* Header Block */}
         <div className="pricing-header">
-          <span className="pricing-badge">Transparent Value</span>
-          <h2>Clear, Predictable Pricing Structures</h2>
+          <span className="pricing-badge">Strategic Engagement</span>
+          <h2>Tailored Project Scoping Frameworks</h2>
           <p className="pricing-lead">
-            No recurring overhead, no surprise ongoing licensing fees. We offer
-            simple 50/50 payment frameworks designed to fit lean business
-            operations.
+            We don't build standard website packages. We engineer custom digital 
+            assets mapped to your business objectives under a structured 50/50 
+            milestone delivery model.
           </p>
         </div>
 
@@ -78,10 +78,9 @@ function Pricing() {
               <div className="card-top">
                 <h3 className="tier-name">{tier.name}</h3>
                 <div className="tier-price-row">
-                  {tier.price !== "Custom" && (
-                    <span className="currency">$</span>
-                  )}
-                  <span className="price-amount">{tier.price}</span>
+                  <span className="price-amount" style={{ fontSize: "2.2rem", letterSpacing: "0" }}>
+                    {tier.price}
+                  </span>
                   <span className="price-period">/ {tier.period}</span>
                 </div>
                 <p className="tier-desc">{tier.desc}</p>
