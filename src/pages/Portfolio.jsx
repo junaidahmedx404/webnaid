@@ -5,32 +5,44 @@ function Portfolio() {
     {
       badge: "Gym & Fitness",
       title: "The Larkana Gym",
-      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1000", // Replace with your screenshot
-      problem: "The gym relied on chaotic Instagram DMs for class bookings, losing track of leads and frustrating potential members.",
-      solution: "Built a high-performance web platform complete with prominent class schedules, mobile-optimized registration, and direct payment pathways.",
-      result: "Engineered to capture automated member signups 24/7 without manual admin tracking required.",
+      image:
+        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1000",
+      problem:
+        "The gym relied on chaotic Instagram DMs for class bookings, losing track of leads and frustrating potential members.",
+      solution:
+        "Built a high-performance web platform complete with prominent class schedules, mobile-optimized registration, and direct payment pathways.",
+      result:
+        "Engineered to capture automated member signups 24/7 without manual admin tracking required.",
       demoColor: "#EF4444",
-      link: "https://junaidahmedx404.github.io/larkana-gym-showcase/"
+      link: "https://junaidahmedx404.github.io/larkana-gym-showcase/",
     },
     {
       badge: "Restaurant & Dining",
       title: "The Larkana Bistro",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1000", // Replace with your screenshot
-      problem: "An outdated PDF menu forced users to download files onto their phones, hiding reservation options and driving customers away.",
-      solution: "Developed a modern, lightning-fast digital interactive menu layout paired with a simple automated table reservation flow.",
-      result: "Optimized to dramatically reduce bounce rates and maximize weekend dinner table bookings.",
+      image:
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1000",
+      problem:
+        "An outdated PDF menu forced users to download files onto their phones, hiding reservation options and driving customers away.",
+      solution:
+        "Developed a modern, lightning-fast digital interactive menu layout paired with a simple automated table reservation flow.",
+      result:
+        "Optimized to dramatically reduce bounce rates and maximize weekend dinner table bookings.",
       demoColor: "#10B981",
-      link: "https://junaidahmedx404.github.io/larkana-bistro-showcase/"
+      link: "https://junaidahmedx404.github.io/larkana-bistro-showcase/",
     },
     {
-      badge: "Real Estate Agency",
-      title: "Vanguard Realty Group",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000", // Replace with your screenshot
-      problem: "Unoptimized property galleries made searching for listings on phones painful, losing buyers to third-party aggregate platforms.",
-      solution: "Designed a clean, ultra-responsive property portfolio filtering system emphasizing direct agent capture forms.",
-      result: "Created explicitly to secure high-intent buyer inquiries and schedule instant property tours.",
-      demoColor: "#F59E0B",
-      link: "#"
+      badge: "Healthcare & Clinical",
+      title: "Apex Clinic Showcase",
+      image:
+        "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1000",
+      problem:
+        "Clunky phone-only booking channels and heavy, slow legacy layouts dropped mobile traffic and created front-desk administrative friction.",
+      solution:
+        "Engineered a premium, zero-bloat clinical interface featuring instant reactive scheduling routed straight to the practice's active WhatsApp desk.",
+      result:
+        "Designed to capture high-intent patient queries instantly with zero queue overhead or drop-off.",
+      demoColor: "#25D366", // Active WhatsApp Accent color to break up the branding array
+      link: "https://junaidahmedx404.github.io/dental-clinic-showcase",
     },
   ];
 
@@ -39,13 +51,13 @@ function Portfolio() {
       <div className="container">
         <h2 className="section-title">Our Work & Case Studies</h2>
         <p className="section-subtitle">
-          We don't just build websites; we design platforms that solve real operational bottlenecks.
+          We don't just build websites; we design platforms that solve real
+          operational bottlenecks.
         </p>
 
         <div className="portfolio-stack">
           {projects.map((project, index) => (
             <div key={index} className="portfolio-item">
-              
               {/* Visual Side with Image and Hover Button */}
               <div className="portfolio-visual">
                 <div className="project-window">
@@ -55,9 +67,20 @@ function Portfolio() {
                     <span className="dot"></span>
                   </div>
                   <div className="project-image-container">
-                    <img src={project.image} alt={project.title} className="project-screenshot" />
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="project-screenshot"
+                    />
                     <div className="project-overlay">
-                      <a href={project.link} className="btn-primary">Live Demo</a>
+                      <a
+                        href={project.link}
+                        className="btn-primary"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Live Demo
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -65,19 +88,30 @@ function Portfolio() {
 
               {/* Text Side */}
               <div className="portfolio-details">
-                <span className="portfolio-badge" style={{ color: project.demoColor }}>{project.badge}</span>
+                <span
+                  className="portfolio-badge"
+                  style={{ color: project.demoColor }}
+                >
+                  {project.badge}
+                </span>
                 <h3>{project.title}</h3>
                 <div className="case-study-metric">
-                  <p><strong>The Challenge:</strong> {project.problem}</p>
+                  <p>
+                    <strong>The Challenge:</strong> {project.problem}
+                  </p>
                 </div>
                 <div className="case-study-metric">
-                  <p><strong>The Solution:</strong> {project.solution}</p>
+                  <p>
+                    <strong>The Solution:</strong> {project.solution}
+                  </p>
                 </div>
                 <div className="case-study-metric outcome">
-                  <p><strong>Expected Results:</strong> <span className="highlight-text">{project.result}</span></p>
+                  <p>
+                    <strong>Expected Results:</strong>{" "}
+                    <span className="highlight-text">{project.result}</span>
+                  </p>
                 </div>
               </div>
-
             </div>
           ))}
         </div>
