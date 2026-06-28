@@ -42,7 +42,7 @@ function Portfolio() {
       result:
         "Designed to capture high-intent patient queries instantly with zero queue overhead or drop-off.",
       demoColor: "#25D366", // Active WhatsApp Accent color to break up the branding array
-      link: "https://junaidahmedx404.github.io/dental-clinic-showcase",
+      link: "https://junaidahmedx404.github.io/Your_Dental_Clinic/",
     },
   ];
 
